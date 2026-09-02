@@ -14,6 +14,17 @@ const Footer = () => (
         <div className="mt-6 font-poppins font-normal text-[15px] leading-[26px] text-dimWhite">
           <p>Tel. fijo: +54 2665279358</p>
           <p>San Luis, Argentina</p>
+          <p>
+            <a
+              href="mailto:nicolasmarceloarteaga@gmail.com"
+              className="hover:text-secondary"
+            >
+              nicolasmarceloarteaga@gmail.com
+            </a>
+          </p>
+          <p className="mt-2 text-white">
+            Trabajo 100% remoto · Respondo consultas en el día.
+          </p>
         </div>
       </div>
 
