@@ -11,6 +11,10 @@ const Footer = () => (
           alt="CTO Web"
           className="w-[230px] h-[72px] object-contain object-left"
         />
+        <div className="mt-6 font-poppins font-normal text-[15px] leading-[26px] text-dimWhite">
+          <p>Tel. fijo: +54 2665279358</p>
+          <p>San Luis, Argentina</p>
+        </div>
       </div>
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">

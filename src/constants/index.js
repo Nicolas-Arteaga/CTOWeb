@@ -7,6 +7,7 @@ import {
   send,
   shield,
   star,
+  n8n,
   dotnet,
   angular,
   react,
@@ -50,6 +51,13 @@ export const features = [
     title: "CI/CD e infraestructura",
     content:
       "Despliegue automático en cada cambio, entornos dev y prod, Docker y contenedores. Tu aplicación siempre online.",
+  },
+  {
+    id: "feature-4",
+    icon: n8n,
+    title: "Automatización con n8n",
+    content:
+      "Ingesta de emails, procesamiento de documentos (OCR), integraciones entre sistemas y flujos a medida que te ahorran trabajo manual.",
   },
 ];
 

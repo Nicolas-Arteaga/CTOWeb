@@ -12,6 +12,7 @@ import arrowUp from "./arrow-up.svg";
 import discount from "./Discount.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
+import n8n from "./n8n.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
@@ -38,6 +39,7 @@ export {
   discount,
   instagram,
   linkedin,
+  n8n,
   people01,
   people02,
   people03,
