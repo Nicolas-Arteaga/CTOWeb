@@ -9,7 +9,7 @@ const Footer = () => (
         <img
           src={logo}
           alt="CTO Web"
-          className="w-auto h-[64px] object-contain self-start"
+          className="w-[230px] h-[72px] object-contain object-left"
         />
       </div>
 

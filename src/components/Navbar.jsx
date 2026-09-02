@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={logo} alt="CTO Web" className="w-auto h-[40px] object-contain" />
+      <img src={logo} alt="CTO Web" className="w-[150px] h-[48px] object-contain object-left" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
