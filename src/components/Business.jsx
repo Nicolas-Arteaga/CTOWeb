@@ -22,8 +22,8 @@ const Business = () =>  (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Vos llevás el negocio, <br className="sm:block hidden" /> yo la parte
-        técnica.
+        Un solo responsable técnico, <br className="sm:block hidden" /> de la
+        idea a producción.
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Sin contratar un área de desarrollo interna: analizo, construyo,

@@ -81,9 +81,9 @@ export const feedback = [
 ];
 
 export const stats = [
-  { id: "stats-1", value: "End-to-end", title: "de la idea a producción" },
+  { id: "stats-1", value: "Full-stack", title: "front · back · deploy" },
   { id: "stats-2", value: "Pagos", title: "Payway · Mercado Pago" },
-  { id: "stats-3", value: "CI/CD", title: "deploy automático dev/prod" },
+  { id: "stats-3", value: "CI/CD", title: "deploy automático" },
 ];
 
 export const footerLinks = [

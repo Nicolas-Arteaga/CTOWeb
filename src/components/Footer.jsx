@@ -8,13 +8,9 @@ const Footer = () => (
       <div className="flex-[1] flex flex-col justify-start mr-10">
         <img
           src={logo}
-          alt="hoobank"
-          className="w-[266px] h-[72.14px] object-contain"
+          alt="CTO Web"
+          className="w-auto h-[64px] object-contain self-start"
         />
-        <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-          Chief Technology Officer Web — desarrollo, pagos e infraestructura
-          para tu producto. Por Nicolás Arteaga.
-        </p>
       </div>
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
