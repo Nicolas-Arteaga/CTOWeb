@@ -27,16 +27,16 @@ export const navLinks = [
   { id: "home", title: "Inicio" },
   { id: "features", title: "Servicios" },
   { id: "product", title: "Cómo trabajo" },
-  { id: "clients", title: "Stack" },
+  { id: "clients", title: "Tecnologías" },
 ];
 
 export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Desarrollo full-stack",
+    title: "Desarrollo de productos web",
     content:
-      "Sitios, e-commerce y aplicaciones a medida con .NET, Angular, React y NestJS. Arquitectura por capas y código mantenible.",
+      "Aplicaciones, e-commerce y sitios a medida con .NET, Angular, React y NestJS. Arquitectura por capas y código mantenible.",
   },
   {
     id: "feature-2",
@@ -48,9 +48,9 @@ export const features = [
   {
     id: "feature-3",
     icon: send,
-    title: "CI/CD e infraestructura",
+    title: "Despliegue y operación",
     content:
-      "Despliegue automático en cada cambio, entornos dev y prod, Docker y contenedores. Tu aplicación siempre online.",
+      "Despliegues ordenados, entornos de desarrollo y producción, Docker y contenedores para operar cambios con claridad.",
   },
   {
     id: "feature-4",
@@ -65,42 +65,42 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Entregas cortas y feedback constante. Sabés en qué punto está el proyecto en todo momento, sin sorpresas al final.",
-    name: "Metodología ágil",
+      "Definimos prioridades, entrego avances cortos y revisamos el rumbo durante el proyecto.",
+    name: "Trabajo por etapas",
     title: "cómo entrego",
     img: star,
   },
   {
     id: "feedback-2",
     content:
-      "No entrego una demo: entrego algo desplegado, monitoreado y documentado, corriendo en un dominio real.",
-    name: "Todo va a producción",
+      "Entrego una solución desplegada, documentada y lista para usar en un dominio real.",
+    name: "Listo para usar",
     title: "el estándar",
     img: shield,
   },
   {
     id: "feedback-3",
     content:
-      "La web no termina el día que sale. Sigo cuando algo falla, cuando hay que sumar una feature o cuando cambia el negocio.",
-    name: "Soporte post-lanzamiento",
+      "Acompaño la evolución del producto después del lanzamiento, cuando aparecen ajustes o nuevas necesidades.",
+    name: "Acompañamiento posterior",
     title: "después de entregar",
     img: send,
   },
 ];
 
 export const stats = [
-  { id: "stats-1", value: "Full-stack", title: "front · back · deploy" },
-  { id: "stats-2", value: "Pagos", title: "Payway · Mercado Pago" },
-  { id: "stats-3", value: "CI/CD", title: "deploy automático" },
+  { id: "stats-1", value: "Desarrollo web", title: "front · back · deploy" },
+  { id: "stats-2", value: "Pagos online", title: "Payway · Mercado Pago" },
+  { id: "stats-3", value: "Despliegue", title: "CI/CD y operación" },
 ];
 
 export const footerLinks = [
   {
     title: "Servicios",
     links: [
-      { name: "Desarrollo full-stack", link: "#features" },
-      { name: "Integración de pagos", link: "#features" },
-      { name: "CI/CD e infraestructura", link: "#features" },
+      { name: "Desarrollo de productos web", link: "#features" },
+      { name: "Pagos online", link: "#features" },
+      { name: "Despliegue y operación", link: "#features" },
       { name: "Migración de sistemas", link: "#product" },
     ],
   },

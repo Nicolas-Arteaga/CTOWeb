@@ -124,6 +124,53 @@
   background: var(--black-gradient);
 }
 
+.stat-card {
+  min-height: 132px;
+  padding: 24px;
+  border: 1px solid rgba(125, 231, 235, 0.16);
+  border-radius: 18px;
+  background: rgba(17, 16, 29, 0.42);
+}
+
+.hero-scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 620px;
+}
+
+.hero-scene__canvas,
+.hero-scene__canvas canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-scene__canvas {
+  z-index: 2;
+}
+
+.hero-scene__hand {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  clip-path: inset(58% 0 0 0);
+}
+
+@media (max-width: 639px), (prefers-reduced-motion: reduce) {
+  .hero-scene__canvas {
+    display: none;
+  }
+
+  .hero-scene__hand {
+    clip-path: none;
+  }
+}
+
 .blue__gradient {
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
   filter: blur(123px);
