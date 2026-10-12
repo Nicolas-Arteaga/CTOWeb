@@ -5,7 +5,7 @@ import HeroBubbles from "./HeroBubbles";
 const Hero = () => {
   return (
     <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
+      <div className={`hero-copy flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="hero-label animate__animated animate__lightSpeedInLeft">
           <p className={styles.paragraph}>
             <span className="text-white">CTO Web</span> — Chief Technology{" "}
@@ -17,13 +17,13 @@ const Hero = () => {
           Tu producto web
           <span className="text-gradient block">listo para operar.</span>
         </h1>
+        <div className="hero-cta">
+          <GetStarted />
+        </div>
         <p className={`${styles.paragraph} max-w-[470px] mt-6`}>
           Desarrollo de productos web, pagos online y despliegue. Llevo tu
           producto de la idea a producción y acompaño su evolución.
         </p>
-        <div className="mt-7">
-          <GetStarted />
-        </div>
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
