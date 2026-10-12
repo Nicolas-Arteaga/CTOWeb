@@ -1,26 +1,15 @@
-import styles from "../style";
-import { arrowUp } from "../assets";
 import { WHATSAPP } from "../constants";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 const GetStarted = () => (
   <a
     href={WHATSAPP}
     target="_blank"
     rel="noreferrer"
-    className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}
+    aria-label="Escribime por WhatsApp"
+    className="whatsapp-bubble"
   >
-    <div className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}>
-      <div className={`${styles.flexStart} flex-row`}>
-        <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
-          <span className="text-gradient">Hablemos</span>
-        </p>
-        <img src={arrowUp} alt="arrow-up" className="w-[23px] h-[23px] object-contain" />
-      </div>
-
-      <p className="font-poppins font-medium text-[18px] leading-[23.4px]">
-        <span className="text-gradient">por WhatsApp</span>
-      </p>
-    </div>
+    <WhatsAppIcon />
   </a>
 );
 
