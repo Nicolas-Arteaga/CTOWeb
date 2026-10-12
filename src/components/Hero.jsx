@@ -7,10 +7,7 @@ const Hero = () => {
     <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
       <div className={`hero-copy flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="hero-label animate__animated animate__lightSpeedInLeft">
-          <p className={styles.paragraph}>
-            <span className="text-white">CTO Web</span> — Chief Technology{" "}
-            <span className="text-white">Officer</span> Web
-          </p>
+          <p className={styles.paragraph}>Chief Technology Officer Web</p>
         </div>
 
         <h1 className="font-poppins font-semibold ss:text-[64px] text-[48px] text-white ss:leading-[78px] leading-[58px] w-full mt-6 tracking-[-0.03em]">
