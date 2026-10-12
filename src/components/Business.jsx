@@ -4,7 +4,7 @@ import styles, { layout } from "../style";
 const FeatureCard = ({ title, content, index }) => (
   <div className="service-flow__item">
     <div className="service-flow__node" aria-hidden="true">
-      <span>{String(index + 1).padStart(2, "0")}</span>
+      <span className={`service-flow__glyph service-flow__glyph--${index}`} />
     </div>
     <div className="service-flow__content">
       <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23.4px] mb-1">
