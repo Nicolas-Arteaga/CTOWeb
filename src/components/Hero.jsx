@@ -1,7 +1,6 @@
 import styles from "../style";
-import { discount } from "../assets";
+import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
-import HeroScene from "./HeroScene";
 
 const Hero = () => {
   return (
@@ -35,7 +34,7 @@ const Hero = () => {
       </div>
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <HeroScene />
+        <img src={robot} alt="Mano robótica sosteniendo tarjetas holográficas" className="w-[100%] h-[100%] relative z-[5]" />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
