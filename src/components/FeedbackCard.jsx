@@ -1,8 +1,8 @@
-const FeedbackCard = ({ content, name, title, index }) => (
+const FeedbackCard = ({ content, name, title }) => (
   <div className="process-flow__item">
     <div className="flex flex-row items-center mb-4">
       <div className="process-flow__node" aria-hidden="true">
-        {String(index + 1).padStart(2, "0")}
+        <span className="process-flow__glyph" />
       </div>
       <div className="flex flex-col ml-4">
         <h4 className="font-poppins font-semibold text-[18px] leading-[24px] text-white">

@@ -19,7 +19,7 @@ const Testimonials = () => (
     </div>
 
     <div className="process-flow relative z-[1]">
-      {feedback.map((card, index) => <FeedbackCard key={card.id} {...card} index={index} />)}
+      {feedback.map((card) => <FeedbackCard key={card.id} {...card} />)}
     </div>
   </section>
 );
