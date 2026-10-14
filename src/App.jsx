@@ -21,8 +21,10 @@ const App = () => (
         <Business />
         <Billing />
         <CardDeal />
-        <Testimonials />
-        <Clients />
+        <div className="process-universe">
+          <Testimonials />
+          <Clients />
+        </div>
         <CTA />
         <Footer />
       </div>
