@@ -2,7 +2,7 @@ import { features } from "../constants";
 import styles, { layout } from "../style";
 
 const FeatureCard = ({ title, content, index }) => (
-  <div className="service-flow__item">
+  <div className={`service-flow__item service-flow__item--${index % 2}`}>
     <div className="service-flow__node" aria-hidden="true">
       <span className="service-flow__glyph" />
     </div>
