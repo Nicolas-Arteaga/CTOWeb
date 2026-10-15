@@ -50,6 +50,10 @@ const Business = () =>  (
           <path d="M66 575 C5 525 105 470 98 428 C91 384 25 365 126 288 C194 235 76 192 172 102" />
           <path className="service-flow__path-pulse" d="M66 575 C5 525 105 470 98 428 C91 384 25 365 126 288 C194 235 76 192 172 102" />
         </svg>
+        <svg className="service-flow__mobile-path" viewBox="0 0 320 760" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M39 92 C71 170 10 230 39 286 C70 370 11 422 39 474 C72 560 8 614 39 662" />
+          <path className="service-flow__mobile-pulse" d="M39 92 C71 170 10 230 39 286 C70 370 11 422 39 474 C72 560 8 614 39 662" />
+        </svg>
         {[...features].reverse().map((feature, index) => (
           <FeatureCard key={feature.id} {...feature} step={features.length - index} index={index} />
         ))}

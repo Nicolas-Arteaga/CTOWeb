@@ -9,7 +9,7 @@ const CardDeal = () => (
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
         Integro la pasarela que tu negocio necesita —Payway/Decidir, Mercado
-        Pago— con manejo de errores, reintentos, estados y conciliación.
+        Pago y Allaria— con manejo de errores, reintentos, estados y conciliación.
         Pensado para producción.
       </p>
     </div>

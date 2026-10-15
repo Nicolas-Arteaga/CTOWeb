@@ -276,6 +276,7 @@
 .service-flow__path { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 4px rgba(0, 220, 255, 0.76)) drop-shadow(0 0 13px rgba(0, 131, 255, 0.35)); }
 .service-flow__path path { fill: none; stroke: #31dfff; stroke-width: 1.35; stroke-linecap: round; opacity: 0.7; animation: serviceRoute 3.2s ease-in-out infinite; }
 .service-flow__path .service-flow__path-pulse { stroke: #b8ffff; stroke-width: 3.5; stroke-dasharray: 1 70; opacity: 0; filter: drop-shadow(0 0 5px #32edff); animation: servicePulse 4.8s linear infinite; }
+.service-flow__mobile-path { display: none; }
 .service-flow__item { position: absolute; z-index: 2; display: grid; grid-template-columns: 46px 310px; gap: 20px; align-items: center; }
 .service-flow__node, .process-flow__node { display: grid; place-items: center; border: 1px solid rgba(112, 245, 211, 0.65); border-radius: 50%; background: radial-gradient(circle at 30% 25%, rgba(110, 231, 242, 0.35), rgba(12, 28, 45, 0.95) 70%); box-shadow: 0 0 22px rgba(73, 224, 216, 0.15), inset 0 0 16px rgba(103, 232, 249, 0.12); color: #9cf6f7; font: 600 13px/1 Poppins, sans-serif; }
 .service-flow__node { z-index: 3; width: 46px; height: 46px; margin-left: 0; border-radius: 10px; border: 2px solid #a1fdff; background: #071c2d; box-shadow: 0 0 9px rgba(0, 232, 255, 1), 0 0 27px rgba(0, 188, 255, 1), 0 0 52px rgba(0, 119, 255, 0.68), inset 0 0 14px rgba(55, 225, 255, 0.46); animation: serviceNodeOrbit 4.8s ease-in-out infinite; }
@@ -353,20 +354,28 @@
   .service-heading { font-size: 45px !important; line-height: 1.05 !important; }
   .service-heading span { margin-top: 10px; font-size: 0.6em; }
   .service-heading-rule { margin-top: 20px; }
-  .service-flow { display: grid; width: 100%; height: auto; gap: 15px; min-height: 0; padding: 4px 0; }
+  .service-flow { display: block; width: 100%; height: 760px; min-height: 0; padding: 0; }
   .service-flow__path { display: none; }
-  .service-flow__item, .service-flow__item--1, .service-flow__item--2, .service-flow__item--3, .service-flow__item--4 { position: relative; top: auto; left: auto; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; margin-left: 0; }
-  .service-flow__node { width: 32px; height: 32px; margin-left: 5px; border-radius: 7px; }
-  .service-flow__glyph { width: 13px; height: 13px; }
-  .service-flow__item::before { top: 32px; left: 37px; width: 25px; }
-  .service-flow__content, .service-flow__item--1 .service-flow__content, .service-flow__item--2 .service-flow__content, .service-flow__item--3 .service-flow__content, .service-flow__item--4 .service-flow__content { width: auto; min-height: 0; padding: 14px 52px 15px 15px; border-radius: 12px; transform: none; }
-  .service-flow__content::before { top: 61px; left: 14px; right: 14px; }
-  .service-flow__card-heading { min-height: 42px; gap: 8px; }
+  .service-flow__mobile-path { position: absolute; z-index: 0; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 0 4px rgba(0, 220, 255, 0.82)) drop-shadow(0 0 13px rgba(0, 131, 255, 0.44)); }
+  .service-flow__mobile-path path { fill: none; stroke: #31dfff; stroke-width: 1.6; stroke-linecap: round; opacity: 0.82; animation: serviceRoute 3.2s ease-in-out infinite; }
+  .service-flow__mobile-path .service-flow__mobile-pulse { stroke: #c9ffff; stroke-width: 3.5; stroke-dasharray: 1 65; opacity: 0; filter: drop-shadow(0 0 5px #32edff); animation: servicePulse 4.8s linear infinite; }
+  .service-flow__item, .service-flow__item--1, .service-flow__item--2, .service-flow__item--3, .service-flow__item--4 { position: absolute; left: 14px; display: grid; width: calc(100% - 14px); grid-template-columns: 44px minmax(0, 1fr); gap: 16px; margin: 0; }
+  .service-flow__item--1 { top: 570px; }
+  .service-flow__item--2 { top: 380px; }
+  .service-flow__item--3 { top: 190px; }
+  .service-flow__item--4 { top: 0; }
+  .service-flow__node { width: 40px; height: 40px; margin-left: 0; border-radius: 9px; }
+  .service-flow__item::before { top: 50%; left: 35px; width: 41px; }
+  .service-flow__content, .service-flow__item--1 .service-flow__content, .service-flow__item--2 .service-flow__content, .service-flow__item--3 .service-flow__content, .service-flow__item--4 .service-flow__content { width: auto; min-height: 0; padding: 15px 49px 15px 15px; border-radius: 13px; transform: rotate(1deg); }
+  .service-flow__item--2 .service-flow__content { transform: rotate(-0.7deg); }
+  .service-flow__item--3 .service-flow__content { transform: rotate(0.8deg); }
+  .service-flow__item--4 .service-flow__content { transform: rotate(-0.6deg); }
+  .service-flow__content::before { top: 56px; left: 14px; right: 14px; }
+  .service-flow__card-heading { min-height: 38px; gap: 7px; }
   .service-flow__step { font-size: 18px; line-height: 21px; }
   .service-flow__content h4 { font-size: 16px !important; line-height: 19px !important; }
-  .service-flow__content p { padding-top: 6px; font-size: 13px !important; line-height: 19px !important; }
-  .service-flow__icon { right: 10px; width: 32px; height: 32px; transform: translateY(-22%); }
-  .service-flow__content::after { width: 65px; height: 52px; }
+  .service-flow__content p { padding-top: 6px; font-size: 12px !important; line-height: 17px !important; }
+  .service-flow__icon { right: 9px; width: 29px; height: 29px; transform: translateY(-28%); }
   .service-flow__item:hover .service-flow__content { translate: 0 -2px; }
   .process-flow { display: grid; height: auto; gap: 22px; margin-top: 8px; }
   .process-flow::before { display: none; }
