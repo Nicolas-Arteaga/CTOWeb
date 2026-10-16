@@ -34,8 +34,7 @@ const Business = () =>  (
   <section id="features" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={`${styles.heading2} service-heading`}>
-        Un solo <br /> responsable <br /> técnico,
-        <span>de la idea a producción.</span>
+        Responsabilidad <br /> técnica de <br /> punta a punta.
       </h2>
       <div className="service-heading-rule" aria-hidden="true" />
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>

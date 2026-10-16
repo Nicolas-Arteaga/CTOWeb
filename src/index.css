@@ -76,6 +76,109 @@
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
 
+.payment-architecture-wrap { overflow: visible; }
+.payment-diagram-wrap { overflow: visible; }
+.payment-diagram { display: block; width: 170%; max-width: none; transform: translateX(-14%); }
+.payment-diagram__provider rect { fill: url(#cardFill); stroke: #11dff4; stroke-width: 3; }
+.payment-diagram__provider text { fill: #fff; font: 600 25px Poppins, sans-serif; }
+.payment-diagram .payment-diagram__label { fill: #fff !important; stroke: #fff; stroke-width: .4px; paint-order: stroke; font-family: Poppins, sans-serif; font-size: 25px; font-weight: 600; }
+.payment-diagram__core > rect:first-child { fill: url(#cardFill); stroke: #13e7fb; stroke-width: 4; }
+.payment-diagram__core > rect:nth-child(2) { fill: #05253a; stroke: #10dff6; stroke-width: 3; }
+.payment-diagram__title { fill: #fff; font: 600 38px Poppins, sans-serif; }
+.payment-diagram__subtitle { fill: #9bc7dd; font: 400 22px Poppins, sans-serif; }
+.payment-diagram__row rect { fill: #041a2c; stroke: #0b5a78; stroke-opacity: .55; }
+.payment-diagram__row text { fill: #e8f7ff; font: 500 15px Poppins, sans-serif; }
+.payment-diagram__row .payment-diagram__state { fill: #b6cedd; font: 400 13px Poppins, sans-serif; }
+@media (max-width: 767px) { .payment-diagram { width: 100%; transform: none; } }
+@media (min-width: 768px) {
+  .payment-architecture-wrap {
+    transform: none;
+  }
+  .payment-architecture {
+    width: 140% !important;
+    transform: translateX(-12%) scale(1.25);
+    transform-origin: left center;
+  }
+}
+.payment-architecture { position: relative; width: 100%; aspect-ratio: 3 / 1; }
+.payment-architecture__provider-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform: none;
+}
+.payment-architecture__links { position: absolute; inset: 0; width: 100%; height: 100%; }
+.payment-architecture__provider {
+  position: absolute;
+  width: 18.4%;
+  height: 37.1%;
+  padding: 0;
+  border: 1.5px solid #11d9f1;
+  border-radius: 16%;
+  background: radial-gradient(circle at 50% 20%, #0c456a 0%, #062b43 38%, #031728 100%);
+  box-shadow: 0 0 13px rgba(24, 225, 246, .33), inset 0 0 16px rgba(38, 194, 226, .13);
+}
+.payment-architecture__provider img {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  display: block;
+  width: auto;
+  max-width: 72%;
+  height: 52%;
+  object-fit: contain;
+  opacity: 1;
+  transform: translateX(-50%);
+  mix-blend-mode: screen;
+  filter: none;
+}
+.payment-architecture__provider--allaria img { width: auto; height: 53%; mix-blend-mode: normal; }
+.payment-architecture__vector-logo {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  width: 52%;
+  height: 52%;
+  transform: translateX(-50%);
+}
+.payment-architecture__vector-logo--payway { fill: none; stroke: #1d65ff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8; }
+.payment-architecture__vector-logo--binance { fill: #f3b72b; }
+.payment-architecture__provider span {
+  position: absolute;
+  right: 6%;
+  bottom: 12%;
+  left: 6%;
+  color: #fff;
+  font: 500 clamp(8px, 1vw, 16px)/1 Poppins, sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+.payment-architecture__provider--mp { top: 8%; left: 4.7%; }
+.payment-architecture__provider--payway { top: 53.5%; left: 4.7%; }
+.payment-architecture__provider--allaria { top: 8%; left: 76.5%; }
+.payment-architecture__provider--binance { top: 53.5%; left: 76.5%; }
+.payment-architecture__links { z-index: 2; overflow: visible; filter: drop-shadow(0 0 4px rgba(32, 219, 242, 0.65)); }
+.payment-architecture__links path { fill: none; stroke: rgba(39, 223, 246, 0.7); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.payment-architecture__links circle { fill: #d4ffff; stroke: #1de0f4; stroke-width: 2.5; filter: drop-shadow(0 0 5px #25e5ff); animation: paymentNode 2.8s ease-in-out infinite; }
+.payment-architecture__signal { stroke: #c8ffff !important; stroke-width: 3.7 !important; stroke-dasharray: 1 74; opacity: 0; filter: drop-shadow(0 0 4px #2eeaff); animation: paymentSignal 4.5s linear infinite; }
+.payment-architecture__signal--two { animation-delay: -1.1s; }
+.payment-architecture__signal--three { animation-delay: -2.2s; }
+.payment-architecture__signal--four { animation-delay: -3.3s; }
+.payment-architecture__core { position: absolute; z-index: 3; top: 17.1%; left: 34.4%; box-sizing: border-box; width: 30.7%; height: 65.7%; padding: 7px; border: 1.5px solid #1be8fb; border-radius: clamp(13px, 1.6vw, 22px); background: linear-gradient(145deg, #082238 0%, #041325 100%); box-shadow: 0 0 0 1px rgba(147, 250, 255, 0.2) inset, 0 0 26px rgba(30, 221, 244, 0.42), 0 0 52px rgba(30, 221, 244, 0.16), 0 18px 30px rgba(0, 0, 0, 0.25); }
+.payment-architecture__core header { display: flex; align-items: center; gap: 7px; padding-bottom: 5px; }
+.payment-architecture__core-icon { display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid rgba(52, 231, 247, 0.8); border-radius: 8px; color: #35e7f7; }
+.payment-architecture__core-icon svg { width: 70%; height: 70%; }
+.payment-architecture__core header strong { display: block; color: #fff; font: 600 clamp(12px, 1.25vw, 18px)/1.1 Poppins, sans-serif; }
+.payment-architecture__core header span { display: block; margin-top: 1px; color: #9db1c8; font: 400 clamp(7px, .7vw, 10px)/1.2 Poppins, sans-serif; white-space: nowrap; }
+.payment-architecture__rows { display: grid; gap: 3px; }
+.payment-architecture__rows > div { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; align-items: center; gap: 5px; min-height: 20px; padding: 2px 6px; border: 1px solid rgba(85, 180, 208, 0.2); border-radius: 6px; background: #05172a; color: #26e1f4; overflow: hidden; }
+.payment-architecture__rows svg { width: 100%; height: 100%; }
+.payment-architecture__rows span { overflow: hidden; color: #e7f5fb; font: 500 clamp(6px, .6vw, 8px)/1.15 Poppins, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+.payment-architecture__rows b { color: #a8c7d6; font: 400 clamp(5px, .48vw, 7px)/1 Poppins, sans-serif; white-space: nowrap; }
+.payment-architecture__rows b::before { display: inline-block; width: 5px; height: 5px; margin-right: 4px; border-radius: 50%; background: #1ee593; box-shadow: 0 0 6px #1ee593; content: ""; }
+@keyframes paymentSignal { 0%, 18% { stroke-dashoffset: 82; opacity: 0; } 24%, 74% { opacity: 1; } 100% { stroke-dashoffset: -82; opacity: 0; } }
+@keyframes paymentNode { 0%, 100% { opacity: .62; } 50% { opacity: 1; } }
+
 .box-shadow {
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }

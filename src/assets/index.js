@@ -1,5 +1,10 @@
 import bill from "./bill.png";
 import card from "./card.png";
+import allariaCurrent from "./allaria-current.png";
+import mercadoPagoIcon from "./mercado-pago-icon.png";
+import paywayIcon from "./payway-icon.png";
+import paywayReference from "./payway-reference.png";
+import binanceIcon from "./binance-icon.png";
 import logo from "./logo.png";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
@@ -27,6 +32,11 @@ import docker from "./tech/docker.svg";
 export {
   bill,
   card,
+  allariaCurrent,
+  mercadoPagoIcon,
+  paywayIcon,
+  paywayReference,
+  binanceIcon,
   logo,
   quotes,
   robot,

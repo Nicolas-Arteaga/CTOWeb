@@ -1,23 +1,20 @@
-import { card } from "../assets";
+import { allariaCurrent, mercadoPagoIcon, paywayReference } from "../assets";
 import styles, { layout } from "../style";
 
-const CardDeal = () => (
-  <section className={layout.section}>
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        Cobrá online <br className="sm:block hidden" /> con un proceso sólido.
-      </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        Integro la pasarela que tu negocio necesita —Payway/Decidir, Mercado
-        Pago y Allaria— con manejo de errores, reintentos, estados y conciliación.
-        Pensado para producción.
-      </p>
-    </div>
+const Node = ({ x, y }) => <g filter="url(#glow)"><circle cx={x} cy={y} r="12" fill="#063048" stroke="#10e7fa" strokeWidth="3"/><circle cx={x} cy={y} r="5" fill="#c5ffff"/></g>;
+const Row = ({ y, icon, text, state }) => <g className="payment-diagram__row"><rect x="515" y={y} width="370" height="52" rx="11" fill="#04192a" stroke="#0a5978" strokeOpacity=".7" strokeWidth="1.5"/><g transform={`translate(534 ${y + 12})`} fill="none" stroke="#13e5f8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">{icon === "retry" && <><path d="M25 9A13 13 0 0 0 3 5L0 9M0 4v5h6M2 20a13 13 0 0 0 22 4l3-4M27 29v-5h-6"/></>}{icon === "signal" && <path d="M2 27V18M10 27V12M18 27V6M26 27V0"/>}{icon === "db" && <><ellipse cx="14" cy="5" rx="12" ry="5"/><path d="M2 5v12c0 3 5 5 12 5s12-2 12-5V5M2 17v12c0 3 5 5 12 5s12-2 12-5V17"/></>}</g><text x="580" y={y + 33}>{text}</text><circle cx="783" cy={y + 26} r="6.5" fill="#16e797"/><text x="866" y={y + 32} textAnchor="end" className="payment-diagram__state">{state}</text></g>;
+const Card = ({ x, y, label, children }) => <g className="payment-diagram__provider"><rect x={x} y={y} width="260" height="184" rx="28" filter="url(#glow)"/><g>{children}</g><text x={x + 130} y={y + 166} textAnchor="middle" style={{ fill: "#ffffff", stroke: "none", fontFamily: "Poppins, sans-serif", fontSize: "27px", fontWeight: 600, letterSpacing: ".15px" }}>{label}</text></g>;
 
-    <div className={layout.sectionImg}>
-      <img src={card} alt="billing" className="w-[100%] h-[100%]" />
-    </div>
-  </section>
-);
+const PaymentDiagram = () => <svg className="payment-diagram" viewBox="0 0 1400 490" role="img" aria-label="Arquitectura de pagos">
+  <defs><filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="paywayMarkBlue" colorInterpolationFilters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .11  0 0 0 0 .34  0 0 0 0 1  .6 .6 .6 0 -.8"/></filter><linearGradient id="cardFill" x1="0" y1="0" x2="1" y2="1"><stop stopColor="#073652"/><stop offset=".6" stopColor="#042033"/><stop offset="1" stopColor="#020f1d"/></linearGradient></defs>
+  <g fill="none" stroke="#08d9f5" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)"><path d="M322 112h52c20 0 31 11 31 31v30c0 12 7 19 19 19h61"/><path d="M322 348h52c20 0 31-11 31-31v-29c0-12 7-19 19-19h61"/><path d="M915 192h61c12 0 19-7 19-19v-30c0-20 11-31 31-31h52"/><path d="M915 269h61c12 0 19 7 19 19v29c0 20 11 31 31 31h52"/></g>
+  {[[322,112],[322,348],[1078,112],[1078,348],[485,192],[485,269],[915,192],[915,269]].map(([x,y]) => <Node key={`${x}-${y}`} x={x} y={y}/>)}
+  <Card x={62} y={32} label="Mercado Pago"><image href={mercadoPagoIcon} x="112" y="51" width="160" height="96" preserveAspectRatio="xMidYMid meet"/></Card>
+  <Card x={62} y={255} label="Payway"><image href={paywayReference} x="92" y="267" width="200" height="118" preserveAspectRatio="xMidYMid meet" filter="url(#paywayMarkBlue)"/></Card>
+  <Card x={1078} y={32} label="Allaria"><image href={allariaCurrent} x="1134" y="49" width="148" height="100" preserveAspectRatio="xMidYMid meet"/></Card>
+  <Card x={1078} y={255} label="Binance"><g transform="translate(1177 284) scale(.76)" fill="#f8b927"><polygon points="51,0 85,34 68,51 51,34 34,51 17,34"/><polygon points="0,51 17,68 0,85 -17,68"/><polygon points="102,51 119,68 102,85 85,68"/><polygon points="51,50 68,67 51,84 34,67"/><polygon points="51,134 17,100 34,83 51,100 68,83 85,100"/></g></Card>
+  <g className="payment-diagram__core"><rect x="485" y="82" width="430" height="322" rx="32" fill="#031a2b" stroke="#13e7fb" strokeWidth="4" filter="url(#coreGlow)"/><rect x="535" y="113" width="73" height="73" rx="14" fill="#052136" stroke="#10dff6" strokeWidth="3"/><g transform="translate(543 129)" fill="none" stroke="#12dff5" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><path d="M2 5h9l5 31h34l6-23H17"/><circle cx="23" cy="49" r="3"/><circle cx="48" cy="49" r="3"/></g><text x="634" y="153" className="payment-diagram__title">Checkout</text><text x="634" y="181" className="payment-diagram__subtitle">Orquestación de pagos</text><Row y={209} icon="retry" text="Reintentos automáticos" state="Activo"/><Row y={270} icon="signal" text="Estados en tiempo real" state="Operativo"/><Row y={331} icon="db" text="Conciliación automática" state="Sincronizado"/></g>
+</svg>;
 
+const CardDeal = () => <section id="payments" className={layout.section}><div className={layout.sectionInfo}><h2 className={styles.heading2}>Cobrá online <br className="sm:block hidden"/> con un proceso sólido.</h2><p className={`${styles.paragraph} max-w-[470px] mt-5`}>Integro la pasarela que tu negocio necesita —Payway/Decidir, Mercado Pago y Allaria— con manejo de errores, reintentos, estados y conciliación. Pensado para producción.</p></div><div className={`${layout.sectionImg} payment-diagram-wrap`}><PaymentDiagram/></div></section>;
 export default CardDeal;
